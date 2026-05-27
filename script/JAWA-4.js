@@ -9,7 +9,7 @@ function getWeather() {
     const cityName = document.querySelector('.search-box input').value;
     // Implementation for fetching weather data would go here
     // Display weather information on the page usin openweather api
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=2f3f32634ce5619eda18c5070e13c3f0&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid="Your App id"&units=metric`)
         .then(response => response.json())
         .then(data => {
             // Process and display weather data
@@ -31,7 +31,7 @@ function getWeather() {
 
         .catch(error => console.error('Error fetching weather data:', error));
 
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=2f3f32634ce5619eda18c5070e13c3f0&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid="Your App id"&units=metric`)
         .then(response => response.json())
         .then(data => {
             // Process and display forecast data
